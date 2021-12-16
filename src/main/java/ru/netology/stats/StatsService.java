@@ -47,6 +47,17 @@ public class StatsService {
         }
         return monthSum;
     }
+
+    public int aboveAverage(long[] sales) {
+        int monthSum = 0;
+        for (long sale : sales) {
+            if (sale > averageSum(sales)) {
+                monthSum++;
+            }
+        }
+
+        return monthSum;
+    }
 }
 
 
